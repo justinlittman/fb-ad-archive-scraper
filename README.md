@@ -1,6 +1,8 @@
 # fb-ad-archive-scraper
 Scraper for Facebook's [Archive of Ads with Political Content](https://www.facebook.com/politicalcontentads) _... until Facebook provides an API._
 
+__Update 06-15-2018: Facebook has switched to continuous scrolling, which breaks fb-ad-archive-scraper. I'll be working on fixing this, but in the meantime you can get the first 30 ads.__
+
 fb-ad-archive-scraper will produce:
 * CSV containing the text and metadata of the ads.
 * Screenshots of each ad.
