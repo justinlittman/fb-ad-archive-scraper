@@ -1,8 +1,6 @@
 # fb-ad-archive-scraper
 Scraper for Facebook's [Archive of Ads with Political Content](https://www.facebook.com/politicalcontentads) _... until Facebook provides an API._
 
-__Update 06-15-2018: Facebook has switched to continuous scrolling, which breaks fb-ad-archive-scraper. I'll be working on fixing this, but in the meantime you can get the first 30 ads.__
-
 fb-ad-archive-scraper will produce:
 * CSV containing the text and metadata of the ads.
 * Screenshots of each ad.
@@ -37,7 +35,8 @@ Tickets / PRs are welcome.
         
 ## Usage
 
-        usage: scraper.py [-h] [--limit LIMIT] email password query [query ...]
+        usage: scraper.py [-h] [--limit LIMIT] [--headed]
+                          email password query [query ...]
         
         Scrape Facebook's Archive of Ads with Political Content
         
@@ -49,7 +48,8 @@ Tickets / PRs are welcome.
         optional arguments:
           -h, --help     show this help message and exit
           --limit LIMIT  Limit on number of ads to scrape
-
+          --headed       Use a headed chrome browser
+  
 For example:
 
         python scraper.py fbuser@gmail.com password pelosi
@@ -57,4 +57,5 @@ For example:
 Notes:
 * fb-ad-archive-scraper uses a headless Chrome browser. This means that you will not see the browser at work.
 * The output of each run will be placed in a separate directory and include a README, CSV file, and PNG images.
- 
+
+_The appoach of extracting data from XHRs came from Ranjit Hatnagar._
