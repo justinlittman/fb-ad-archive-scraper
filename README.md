@@ -31,7 +31,11 @@ Tickets / PRs are welcome.
         
 5. [Install Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/). On a Mac, this is:
 
-        brew install chromedriver
+        brew cask install chromedriver
+        
+   If already installed, upgrade Chromedriver with:
+
+        brew cask upgrade chromedriver
         
 ## Usage
 
