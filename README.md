@@ -62,4 +62,4 @@ Notes:
 * fb-ad-archive-scraper uses a headless Chrome browser. This means that you will not see the browser at work.
 * The output of each run will be placed in a separate directory and include a README, CSV file, and PNG images.
 
-_The appoach of extracting data from XHRs came from Ranjit Hatnagar._
+_The approach of extracting data from XHRs came from Ranjit Hatnagar._
