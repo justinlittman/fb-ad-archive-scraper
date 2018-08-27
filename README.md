@@ -39,27 +39,41 @@ Tickets / PRs are welcome.
         
 ## Usage
 
-        usage: scraper.py [-h] [--limit LIMIT] [--headed]
+        usage: scraper.py [-h] [--limit LIMIT] [--headed] [--wait WAIT]
+                          [--country {ALL,US,BR}]
+                          [--type {news_ads,political_and_issue_ads}]
+                          [--status {all,active,inactive}]
                           email password query [query ...]
         
         Scrape Facebook's Archive of Ads with Political Content
         
         positional arguments:
-          email          Email address for FB account
-          password       Password for FB account
-          query          Query
+          email                 Email address for FB account
+          password              Password for FB account
+          query                 Query
         
         optional arguments:
-          -h, --help     show this help message and exit
-          --limit LIMIT  Limit on number of ads to scrape
-          --headed       Use a headed chrome browser
-  
+          -h, --help            show this help message and exit
+          --limit LIMIT         Limit on number of ads to scrape
+          --headed              Use a headed chrome browser
+          --wait WAIT           Seconds to sleep between requests
+          --country {ALL,US,BR}
+                                Limit ads by country. Choices: ALL, US, BR. Default is
+                                ALL.
+          --type {news_ads,political_and_issue_ads}
+                                Limit ads by type. Choices: news_ads,
+                                political_and_issue_ads. Default is
+                                political_and_issue_ads.
+          --status {all,active,inactive}
+                                Limit ads by status. Choices: all, active, inactive.
+                                Default is all.
+                          
 For example:
 
         python scraper.py fbuser@gmail.com password pelosi
         
 Notes:
 * fb-ad-archive-scraper uses a headless Chrome browser. This means that you will not see the browser at work.
-* The output of each run will be placed in a separate directory and include a README, CSV file, and PNG images.
+* The output of each run will be placed in a separate directory and include a README, CSV file summarizing the ads, PNG images, and JSON retrieved from Facebook.
 
 _The approach of extracting data from XHRs came from Ranjit Hatnagar._
