@@ -73,7 +73,7 @@ def process_ad_divs(ad_divs, ad_count, driver, dirname, ad_limit, wait=0):
         print('Ad {}'.format(ad_count))
         screenshot(ad_div, ad_count, dirname, driver)
         # Click Ad Performance
-        ad_div.find_element_by_link_text('See Ad Performance').click()
+        ad_div.find_element_by_partial_link_text('See Ad Performance').click()
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
         processed_add_divs.add(ad_div)
         if ad_limit == ad_count:
